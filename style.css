@@ -1,0 +1,246 @@
+/* Remove default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a cleaner font and increase font size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Increase font size */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+/* Style the h2 element*/
+h2{
+    font-weight: 100;
+}
+
+/* Style the h3 element */
+h3 {
+    font-weight: 100;
+    color: #999; /* Set text color to light grey */
+}
+
+/* Center the login container */
+.login-container {
+    text-align: center;
+    margin-top: 100px; /* Add more margin from the top */
+}
+
+/* Style the form */
+form {
+    border: none; /* Remove border from the form */
+    margin-top: 30px; /* Add margin at the top of the form */
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="password"] {
+    border: none; /* Remove border from input fields */
+    border-bottom: 1px solid #000; /* Add bottom border for visual separation */
+    outline: none; /* Remove default input focus outline */
+    font-family: Arial, sans-serif; /* Use a cleaner font */
+    margin: 20px; /* Add margin around input fields */
+    padding: 10px; /* Add padding inside input fields */
+}
+
+/* Style submit button */
+input[type="submit"] {
+    display: inline-block;
+    background-color: #3498db; /* Set a lighter blue background color */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 15px 30px; /* Increase padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-top: 30px; /* Add margin at the top of the button */
+    border-radius: 5px; /* Make rounded corners */
+    transition: all 0.3s ease;
+}
+
+/* Change button color on hover */
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Darken background color on hover */
+    transform: scale(1.1);
+}
+
+/* Focus effect for accessibility */
+input[type="submit"]:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add custom focus outline */
+}
+
+/* Style remember password checkbox and forgot password link container */
+.additional-options {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+}
+
+/* Style remember password checkbox */
+input[type="checkbox"] {
+    margin-right: 10px; /* Add margin to the right for spacing */
+}
+
+/* Style forgot password link */
+.forgot-password {
+    text-decoration: none;
+    margin-left: 10px; /* Add margin to the left for spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Remove underline from forgot password link */
+.forgot-password:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Flexbox layout for charity container */
+.charity-container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+/* Individual charity */
+.charity {
+    margin: 0 10px 20px; /* Add some margin */
+    flex: 1 1 300px; /* Flex basis for each item */
+    text-align: center; /* Center the text */
+}
+
+/* Style images */
+.charity img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Center the text under the images */
+.charity-info {
+    text-align: center;
+}
+
+/* Additional styles for crossed out text */
+.crossed-out {
+    text-decoration: line-through;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+/* Center the welcome container */
+.welcome-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.progress {
+    height: 20px;
+    background-color: #2980b9;
+    width: calc(100% * var(--progress) / 100);
+}
+
+@media screen and (max-width: 600px) {
+    .charity-container {
+        flex-direction: column; /* Stack charities vertically */
+    }
+    .charity {
+        margin-bottom: 20px; /* Add margin between charities */
+    }
+}
+
+/* CSS for footer */
+footer {
+    position: fixed; /* Fixed positioning */
+    bottom: 0; /* Position at the bottom of the viewport */
+    width: 100%; /* Full width */
+    background-color: #2980b9; /* Set background color */
+    padding: 10px 0; /* Add some padding */
+}
+
+footer nav ul {
+    list-style: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the list items */
+}
+
+footer nav ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin: 0 10px; /* Add margin between list items */
+}
+
+footer nav ul li a {
+    color: white; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    position: relative; /* Enable relative positioning */
+}
+
+footer nav ul li a::after {
+    content: ''; /* Add separator */
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80%;
+    background-color: white; /* Set separator color */
+}
+
+.charity-paragraph{
+    padding: 0 20px;
+}
+
+/* Additional styles for the mobile version and image */
+.charity-image {
+    max-width: 100%; /* Maximum width of the image relative to its container */
+    max-height: 100vh; /* Maximum height of the image relative to the viewport height */
+    height: auto;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+    .charity-image {
+        max-width: 50%; /* Set a specific maximum width for larger screens */
+    }
+}
+
+.donate-button {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove underline for anchor */
+}
+
+.donate-button:hover {
+    transform: scale(1.1);
+}
+
+.donate-button:active {
+    transform: scale(1); /* Reset scale on click */
+}
+
+@media screen and (max-width: 600px) {
+    .charity-container {
+        padding: 10px;
+    }
+    .charity {
+        text-align: center;
+    }
+    .charity-info {
+        margin-top: 20px;
+    }
+}
